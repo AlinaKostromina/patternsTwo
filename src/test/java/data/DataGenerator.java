@@ -24,6 +24,28 @@ public class DataGenerator {
     private DataGenerator() {
     }
 
+    @Value
+    public static class RegistrationDto {
+        String login;
+        String password;
+        String status;
+
+//        public RegistrationDto(String login, String password, String status) {
+//        }
+
+        // геттеры
+        public String getLogin() {
+            return login;
+        }
+        public String getPassword() {
+            return password;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+    }
+
     private static void sendRequest(RegistrationDto user) {
         given()
                 .spec(requestSpec)
@@ -57,22 +79,5 @@ public class DataGenerator {
         }
     }
 
-    @Value
-    public static class RegistrationDto {
-        String login;
-        String password;
-        String status;
 
-        // геттеры
-        public String getLogin() {
-            return login;
-        }
-        public String getPassword() {
-            return password;
-        }
-
-        public String getStatus() {
-            return status;
-        }
-    }
 }
