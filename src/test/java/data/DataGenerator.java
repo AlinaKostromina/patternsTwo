@@ -29,21 +29,6 @@ public class DataGenerator {
         String login;
         String password;
         String status;
-
-//        public RegistrationDto(String login, String password, String status) {
-//        }
-
-        // геттеры
-        public String getLogin() {
-            return login;
-        }
-        public String getPassword() {
-            return password;
-        }
-
-        public String getStatus() {
-            return status;
-        }
     }
 
     private static void sendRequest(RegistrationDto user) {
@@ -78,6 +63,4 @@ public class DataGenerator {
             return registeredUser;
         }
     }
-
-
 }
